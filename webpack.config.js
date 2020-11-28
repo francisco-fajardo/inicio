@@ -9,7 +9,7 @@ const config = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/dist/[name].[contenthash].js',
+    filename: 'js/dist/[name].js',
     publicPath: ''
   },
   module: {
@@ -49,7 +49,7 @@ const config = {
       template: 'src/views/index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/dist/style.[contenthash].css'
+      filename: 'css/dist/style.css'
     }),
     new OptimizeCssAssetsPlugin({}),
     new CopyPlugin({
