@@ -46,7 +46,8 @@ const config = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: 'src/views/index.html'
+      template: 'src/views/index.html',
+      inject: false
     }),
     new MiniCssExtractPlugin({
       filename: 'css/dist/style.css'
