@@ -1,12 +1,9 @@
-name: Continuous Deployment
+name: Continuous Integration
 
-on:
-    push:
-        branches:
-            - master
+on: [push, pull_request]
 
 jobs:
-    deploy:
+    format:
         runs-on: ubuntu-latest
 
         steps:
@@ -29,13 +26,11 @@ jobs:
             - name: Install dependencies
               run: npm ci
 
-            - name: Build
-              run: npm run build-prod
+            - name: Run Prettier
+              run: npm run format
 
-            - name: Deploy to the Server
-              uses: SamKirkland/FTP-Deploy-Action@4.0.0
+            - name: Commit changes
+              uses: stefanzweifel/git-auto-commit-action@v4
               with:
-                  server: ${{ secrets.FTP_SERVER }}
-                  username: ${{ secrets.FTP_USERNAME }}
-                  password: ${{ secrets.FTP_PASSWORD }}
-                  local-dir: ./dist/
+                  commit_message: Apply formatting changes
+                  branch: ${{ github.head_ref }}

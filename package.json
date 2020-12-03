@@ -1,42 +1,50 @@
 {
-  "name": "inicio",
-  "version": "1.0.0",
-  "description": "",
-  "private": true,
-  "keywords": ["francisco fajardo", "fajardo", "escuela tecnica", "caricuao", "liceo"],
-  "author": "E.T. \"Francisco Fajardo\"",
-  "license": "Apache-2.0",
-  "scripts": {
-    "build-dev": "webpack --mode development",
-    "build-prod": "webpack --mode production"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "@babel/core": "^7.12.9",
-    "@babel/preset-env": "^7.12.7",
-    "autoprefixer": "^10.0.4",
-    "babel-loader": "^8.2.2",
-    "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^6.3.2",
-    "css-loader": "^5.0.1",
-    "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^4.5.0",
-    "mini-css-extract-plugin": "^1.3.1",
-    "optimize-css-assets-webpack-plugin": "^5.0.4",
-    "postcss-loader": "^4.1.0",
-    "webpack": "^5.9.0",
-    "webpack-cli": "^4.2.0"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+    "name": "inicio",
+    "version": "1.0.0",
+    "description": "",
+    "private": true,
+    "keywords": [
+        "francisco fajardo",
+        "fajardo",
+        "escuela tecnica",
+        "caricuao",
+        "liceo"
     ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "author": "E.T. \"Francisco Fajardo\"",
+    "license": "Apache-2.0",
+    "scripts": {
+        "build-dev": "webpack --mode development",
+        "build-prod": "webpack --mode production",
+        "format": "prettier --write ."
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@babel/core": "^7.12.9",
+        "@babel/preset-env": "^7.12.7",
+        "autoprefixer": "^10.0.4",
+        "babel-loader": "^8.2.2",
+        "clean-webpack-plugin": "^3.0.0",
+        "copy-webpack-plugin": "^6.3.2",
+        "css-loader": "^5.0.1",
+        "file-loader": "^6.2.0",
+        "html-webpack-plugin": "^4.5.0",
+        "mini-css-extract-plugin": "^1.3.1",
+        "optimize-css-assets-webpack-plugin": "^5.0.4",
+        "postcss-loader": "^4.1.0",
+        "prettier": "^2.2.1",
+        "webpack": "^5.9.0",
+        "webpack-cli": "^4.2.0"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
 }
