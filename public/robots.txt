@@ -1,4 +1,3 @@
 User-agent: *
 Disallow: /notas/
 Disallow: /actividades/
-Sitemap: https://franciscofajardo.com/sitemap.xml
