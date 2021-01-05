@@ -1,5 +1,5 @@
+# Stage 1: Build assets
 FROM node:14-alpine as builder
-
 WORKDIR /assets
 
 # Copy the package.json and install dependencies
@@ -9,10 +9,13 @@ RUN npm ci
 # Copy the rest of files
 COPY . .
 
-# Build the project
+# Build the assets
 RUN npm run build-prod
 
+# Stage 2: Setup Nginx
 FROM nginx:alpine as production-build
+
+# Copy the custom Nginx config
 COPY ./.docker/nginx/nginx.conf /etc/nginx/nginx.conf
 
 # Remove default nginx index page
