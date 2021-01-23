@@ -102,12 +102,6 @@ aside {
     top: 5px;
 }
 
-.btn[disabled] {
-    background-color: #cccccc;
-    color: #666666;
-    cursor: default;
-}
-
 img {
     max-width: 100%;
     height: auto;
