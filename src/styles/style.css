@@ -28,6 +28,10 @@ main {
     flex: 1 1 auto;
 }
 
+aside {
+    flex: 1 1 auto;
+}
+
 .header-img {
     display: block;
     margin-left: auto;
