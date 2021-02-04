@@ -6,7 +6,10 @@ const CopyPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-    entry: "./src/index.js",
+    entry: {
+        main: "./src/index.js",
+        notFound: "./src/404.js",
+    },
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "js/dist/[name].js",
@@ -48,9 +51,16 @@ module.exports = {
             filename: "index.html",
             template: "src/views/index.html",
             inject: false,
+            chunks: ["main"],
+        }),
+        new HtmlWebpackPlugin({
+            filename: "404.html",
+            template: "src/views/404.html",
+            inject: false,
+            chunks: ["notFound"],
         }),
         new MiniCssExtractPlugin({
-            filename: "css/dist/style.css",
+            filename: "css/dist/[name].css",
         }),
         new OptimizeCssAssetsPlugin({}),
         new CopyPlugin({
