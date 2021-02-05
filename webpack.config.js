@@ -13,7 +13,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "js/dist/[name].js",
-        publicPath: "",
+        publicPath: "/",
     },
     module: {
         rules: [
