@@ -138,6 +138,28 @@
         <!-- Styles -->
         <%= htmlWebpackPlugin.tags.headTags %>
 
+        <!-- SEO Schema -->
+        <script type="application/ld+json">
+            {
+                "@type": "School",
+                "headline": "E.T. \"Francisco Fajardo\"",
+                "address": "Ruiz Pineda - Caricuao",
+                "logo": "https://franciscofajardo.com/img/logo.png",
+                "publicAccess": true,
+                "slogan": "Formamos estudiantes con miras al éxito de un país productivo",
+                "email": "contacto@franciscofajardo.com",
+                "url": "https://franciscofajardo.com",
+                "description": "Formamos estudiantes con miras al éxito de un país productivo",
+                "name": "E.T. \"Francisco Fajardo\"",
+                "sameAs": [
+                    "https://www.facebook.com/groups/555209544587295",
+                    "https://twitter.com/francis90515194",
+                    "https://github.com/francisco-fajardo"
+                ],
+                "@context": "https://schema.org"
+            }
+        </script>
+
         <!--[if lt IE 9]>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
